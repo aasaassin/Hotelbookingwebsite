@@ -28,10 +28,3 @@ function alert($type, $msg)
           alert;
 }
 ?>
-<style>
-.custom-alert {
-    position: fixed;
-    top: 80px;
-    right: 25px;
-}
-</style>
