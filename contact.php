@@ -55,9 +55,11 @@
                     </a>
                     <h5 class="mt-4">Theo dõi</h5>
                     <a href="#" class="d-inline-block text-dark fs-5 me-2">
-                        <i class="bi bi-github me-1"></i>
+                        <i class="bi bi-twitter"></i>
                     </a>
-
+                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
+                        <i class="bi bi-instagram"></i>
+                    </a>
                     <a href="#" class="d-inline-block text-dark fs-5">
                         <i class="bi bi-facebook me-1"></i>
                     </a>
