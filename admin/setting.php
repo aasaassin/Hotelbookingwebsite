@@ -39,16 +39,19 @@ adminLogin();
                     </button>
                     <div class="collapse navbar-collapse flex-column mt-2 align-items-stretch" id="adminDropdown">
                         <ul class="nav nav-pills flex-column">
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link text-white" href="dashboard.php">Dashboard</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Rooms</a>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="features_facilities.php">Features & Facilities</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Users</a>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="user_queries.php">User Queries</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="carousel.php">Carousel</a>
+                            </li>
+                            <li class="nav-item ">
                                 <a class="nav-link text-white" href="setting.php">Settings</a>
                             </li>
                         </ul>
