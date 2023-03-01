@@ -26,42 +26,66 @@
         </p>
     </div>
 
+
+
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6317112758893!2d106.68029371411639!3d10.762840862388996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1c06f4e1dd%3A0x43900f1d4539a3d!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBLaG9hIGjhu41jIFThu7Egbmhpw6puIC0gxJDhuqFpIGjhu41jIFF14buRYyBnaWEgVFAuSENN!5e0!3m2!1svi!2s!4v1676908226715!5m2!1svi!2s"
-                        height="320px" loading="lazy" class="w-100 rounded mb-4">
+                    <iframe src="<?php echo $contact_r['iframe'] ?>" height="320px" loading="lazy"
+                        class="w-100 rounded mb-4">
                     </iframe>
                     <h5>Địa chỉ</h5>
-                    <a href="https://goo.gl/maps/d39MjtJL2L1C1HrT7" target="_blank"
+                    <a href=" <?php echo $contact_r['gmap'] ?>" target="_blank"
                         class="d-inline-block text-decoration-none text-dark mb-2">
                         <i class="bi bi-geo-alt-fill"></i>
-                        227 Đ. Nguyễn Văn Cừ, Phường 4, Quận 5, Thành phố Hồ Chí Minh
+                        <?php echo $contact_r['address'] ?>
                     </a>
                     <h5 class="mt-4">Số điện thoại</h5>
-                    <a href="tel: 0916064500" class="d-inline-block mb-2 text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i> 0916064500
+                    <a href="tel:  <?php echo $contact_r['pn1'] ?>"
+                        class="d-inline-block mb-2 text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i> <?php echo $contact_r['pn1'] ?>
                     </a>
                     <br />
-                    <a href="tel: 0385822122" class="d-inline-block text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i> 0385822122
+                    <?php 
+                    if($contact_r['pn2']!=''){
+                        echo<<<data
+                        <a href="tel: $contact_r[pn2] ?>"
+                    class="d-inline-block text-decoration-none text-dark">
+                    <i class="bi bi-telephone-fill"></i> $contact_r[pn2]
                     </a>
+                    data;
+                    }
+                    ?>
                     <h5 class="mt-4">Email</h5>
-                    <a href="mailto: phanmanhtruong01@gmail.com" class="d-inline-block text-decoration-none text-dark">
+                    <a href="mailto: <?php echo $contact_r['email'] ?>"
+                        class="d-inline-block text-decoration-none text-dark">
                         <i class="bi bi-envelope-fill"></i>
-                        phanmanhtruong01@gmail.com
+                        <?php echo $contact_r['email'] ?>
                     </a>
                     <h5 class="mt-4">Theo dõi</h5>
-                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
-                        <i class="bi bi-twitter"></i>
+                    <?php 
+                    if($contact_r['tw']!=''){
+                        echo<<<data
+                            <a href="$contact_r[tw]" class="d-inline-block mb-3" target="_blank">
+                                 <span class="badge bg-light text-dark fs-6 p-2"> <i class="bi bi-twitter me-1"></i>Twitter
+                                </span>
+                            </a>
+                             <br />
+                        data;
+                    }
+                    ?>
+
+                    <a href="<?php echo $contact_r['fb'] ?>" class="d-inline-block mb-3" target="_blank">
+                        <span class="badge bg-light text-dark fs-6 p-2">
+                            <i class="bi bi-facebook me-1"></i> Facebook
+                        </span>
                     </a>
-                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="#" class="d-inline-block text-dark fs-5">
-                        <i class="bi bi-facebook me-1"></i>
+                    <br />
+                    <a href="<?php echo $contact_r['insta'] ?>" class="d-inline-block mb-3" target="_blank">
+                        <span class="badge bg-light text-dark fs-6 p-2">
+                            <i class="bi bi-instagram me-1"></i>Instagram
+                        </span>
                     </a>
                 </div>
             </div>
