@@ -1,15 +1,6 @@
-<?php 
-    require('admin/inc/db_config.php');
-    require('admin/inc/essentials.php');
-   
-    $contact_q="SELECT * FROM `contact_details` WHERE `sr_no`=?";
-    $values=[1];
-    $contact_r=mysqli_fetch_assoc(select($contact_q,$values,'i'));  
-?>
-
 <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand me-5" href="index.php"><img class="w-25" src="images/logo.png" alt="" /></a>
+        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php"><?php echo $settings_r['site_title'] ?></a>
         <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -85,7 +76,7 @@
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <form>
+            <form id="register-form">
                 <div class="modal-header">
                     <h5 class="modal-title d-flex align-items-center">
                         <i class="bi bi-person-lines-fill fs-3 me-2"></i>
@@ -102,31 +93,40 @@
                         <div class="row">
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Họ tên</label>
-                                <input type="text" class="form-control shadow-none" />
+                                <input type="text" name="name" class="form-control shadow-none" required />
                             </div>
                             <div class="col-md-6 ps-0">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control shadow-none" />
+                                <input type="email" name="email" class="form-control shadow-none" required />
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Số điện thoại</label>
-                                <input type="text" class="form-control shadow-none" />
+                                <input type="text" name="phonenum" class="form-control shadow-none" required />
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Hình ảnh</label>
-                                <input type="file" class="form-control shadow-none" />
+                                <input type="file" name="profile" accept=".jpg,.jpeg,.png,.webp"
+                                    class="form-control shadow-none" required />
                             </div>
                             <div class="col-md-12 p-0 mb-3">
                                 <label class="form-label">Địa chỉ</label>
-                                <textarea class="form-control shadow-none" rows="1"></textarea>
+                                <textarea name="address" class="form-control shadow-none" rows="1" required></textarea>
+                            </div>
+                            <div class="col-md-6 ps-0 mb-3">
+                                <label class="form-label">Pin code</label>
+                                <input name="pincode" type="number" class="form-control shadow-none" required />
+                            </div>
+                            <div class="col-md-6 ps-0 mb-3">
+                                <label class="form-label">Ngày sinh</label>
+                                <input name="dob" type="date" class="form-control shadow-none" required />
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Mật khẩu</label>
-                                <input type="password" class="form-control shadow-none" />
+                                <input name="pass" type="password" class="form-control shadow-none" />
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Xác nhận mật khẩu</label>
-                                <input type="password" class="form-control shadow-none" />
+                                <input name="cpass" type="password" class="form-control shadow-none" />
                             </div>
                         </div>
                     </div>

@@ -5,13 +5,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Booking - FACILITIES</title>
     <?php require('inc/links.php'); ?>
+    <title><?php echo $settings_r['site_title'] ?> - FACILITIES</title>
     <style>
     .pop:hover {
         border-top-color: red !important;
         transform: scale(1.03);
         transition: all 0.3s;
+    }
+
+    .custom-alert {
+        position: fixed;
+        top: 80px;
+        right: 25px;
+        z-index: 1111;
     }
     </style>
 </head>

@@ -5,14 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Booking - ABOUT</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <?php require('inc/links.php'); ?>
+    <title><?php echo $settings_r['site_title'] ?> - ABOUT</title>
     <style>
     .box:hover {
         border-top-color: red !important;
         transform: scale(1.03);
         transition: all 0.3s;
+    }
+
+    .custom-alert {
+        position: fixed;
+        top: 80px;
+        right: 25px;
+        z-index: 1111;
     }
     </style>
 </head>
